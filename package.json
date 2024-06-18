@@ -1,0 +1,21 @@
+{
+  "name": "stufshoptest",
+  "version": "1.0.0",
+  "description": "Stuff shop test",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "test"
+  ],
+  "author": "Filip Cica",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.11.0"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}

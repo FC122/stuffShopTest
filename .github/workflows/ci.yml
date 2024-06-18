@@ -1,0 +1,18 @@
+name: test
+on: workflow_dispatch
+
+jobs:
+  test:
+    name: Test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.11.1
+      - run: npm ci
+      - name: generate report
+        run: npm test
+      - uses: pavi2410/html-preview-action@v2
+        with:
+            html_file: 'stufShopTest\cypress\reports\html\.jsons\index.html'
