@@ -13,6 +13,8 @@ jobs:
       - run: npm ci
       - name: generate report
         run: npm test
-      - uses: pavi2410/html-preview-action@v2
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
-            html_file: 'stufShopTest\cypress\reports\html\.jsons\index.html'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./cypress/reports/html/.jsons
